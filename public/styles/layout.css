@@ -20,6 +20,15 @@ body {
   font-size: 24px;
 }
 
+main {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

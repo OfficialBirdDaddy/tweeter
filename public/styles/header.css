@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #e2cbf0;
+  background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
+  line-height: 0.1em;
+
+}
