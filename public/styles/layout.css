@@ -32,3 +32,94 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .fake-tweets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  width: 100%;
+  border: black solid 3px;
+ 
+}
+
+.fake-tweets:hover {
+  box-shadow: #545149 0px 0px 10px;
+}
+
+.tweet {
+  
+  margin-bottom: 1em;
+  width: 100%;
+
+} 
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  /* background-image: none; */
+  height: min-content;
+  width: 100%;
+  padding: 0.2em;
+
+}
+
+.tweet-header h4 {
+  font-family: 'arial';
+  font-weight: lighter;
+  font-size: smaller;
+}
+
+.tweet-header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: smaller;
+  padding: 0.2em;
+}
+
+.fake-tweets article header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+
+}
+
+.tweet-body {
+  border-bottom-style: solid;
+  padding: 0.5em;
+
+}
+
+.tweet-body p {
+  font-size: smaller;
+  margin: 0;
+  padding: 0.5em;
+
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: smaller;
+  padding: 0.2em;
+}
+
+.tweet-footer span {
+  font-size: small;
+}
+
+.tweet-footer div {
+  color: #4056a1;
+  cursor: pointer;
+  
+}
+
+.tweet-footer div i:hover {
+  color: darkgoldenrod;
+}
