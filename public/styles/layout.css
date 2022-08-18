@@ -33,24 +33,28 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- .fake-tweets {
+ 
+
+ #tweets-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.5em;
   width: 100%;
-  border: black solid 3px;
- 
+  
 }
 
-.fake-tweets:hover {
+.tweet:hover {
   box-shadow: #545149 0px 0px 10px;
+
 }
 
 .tweet {
   
   margin-bottom: 1em;
   width: 100%;
+  border: black solid 3px;
+  padding: 0.5em;
+  
 
 } 
 
@@ -70,6 +74,7 @@ main {
   font-family: 'arial';
   font-weight: lighter;
   font-size: smaller;
+
 }
 
 .tweet-header div {
@@ -79,13 +84,13 @@ main {
   align-items: center;
   font-size: smaller;
   padding: 0.2em;
+
 }
 
-.fake-tweets article header img {
+#tweets-container article header img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  margin-right: 0.5em;
+  margin-right: 0.75em;
 
 }
 
@@ -107,7 +112,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   font-size: smaller;
-  padding: 0.2em;
+  padding: 1.2em;
+
 }
 
 .tweet-footer span {
@@ -115,11 +121,47 @@ main {
 }
 
 .tweet-footer div {
+  
   color: #4056a1;
   cursor: pointer;
   
 }
 
+.tweet-footer div i {
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+
+}
+
 .tweet-footer div i:hover {
   color: darkgoldenrod;
+
+}
+
+.empty-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f1ec;
+  border: red solid 3px;
+  padding: 0.5em;
+  display: none;
+
+}
+
+.too-long {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f1ec;
+  border: red solid 3px;
+  padding: 0.5em;
+  display: none;
+
 }
