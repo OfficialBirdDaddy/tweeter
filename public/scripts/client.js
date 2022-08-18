@@ -26,7 +26,7 @@ $(() => {
       return;
     }
 
-    if (tweetData > 140) {
+    if (tweetData.length > 140) {
       $('.too-long').slideDown();
       return;
     }
@@ -37,8 +37,8 @@ $(() => {
       data: data,
   }).then(() => {
     loadTweets();
-    $('.empty-tweet').slideUp();
     $('.too-long').slideUp();
+    $('.empty-tweet').slideUp();
     $('#tweet-text').val('');
   });
 });
