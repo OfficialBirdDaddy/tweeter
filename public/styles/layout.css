@@ -67,6 +67,7 @@ main {
   height: min-content;
   width: 100%;
   padding: 0.2em;
+  background-color: #f4f1ec;
 
 }
 
@@ -163,5 +164,53 @@ main {
   border: red solid 3px;
   padding: 0.5em;
   display: none;
+
+}
+
+@media (max-width: 768px) {
+  .tweet-header h4 {
+    font-size: small;
+  }
+
+  .tweet-header div {
+    font-size: small;
+  }
+
+  .tweet-body p {
+    font-size: small;
+  }
+
+  .tweet-footer div {
+    font-size: small;
+  }
+
+}
+
+@media (min-width: 769px) {
+  
+  #main-header {
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 10em; */
+  }
+
+  .new-tweet {
+    display: flex;
+    width: 100%;
+    padding-left: 1.2em;
+  }
+
+  #compose-tweet {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+    margin-top: 10em;
+  }
+
+  .tweet-header {
+    margin-top: 5px;
+  }
 
 }

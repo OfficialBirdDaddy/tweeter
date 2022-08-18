@@ -3,6 +3,9 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -28,6 +31,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
+    
     <nav>
       <span>tweeter</span>
       <div class="nav_newtweet">
@@ -35,16 +39,18 @@
         <i class="fa-solid fa-angles-down form-toggle"></i>
       </div>
     </nav>
+    
 
-    <header>
-      <div>
-          <img src="/images/profile-hex.png" style="width:8em; height:8em"> 
-      </div>
-      <br>
-      <div>
-          <h2>It's You!</h2>
-      </div>
-  </header>
+    <div id="main-header">
+      <header class="profile-header">
+        <div>
+            <img src="/images/profile-hex.png" style="width:8em; height:8em"> 
+        </div>
+        <br>
+        <div>
+            <h2>It's You!</h2>
+        </div>
+      </header>
   
 
     <!-- Page-specific (main) content here -->
@@ -92,6 +98,8 @@
       </section>
 
     </main>
+
+    </div>
     
   </body>
 </html>
