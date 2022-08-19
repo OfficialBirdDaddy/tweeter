@@ -80,25 +80,25 @@ $(() => {
 
   const createTweetElement = function (tweetObj) { 
     console.log(tweetObj);
-    const $tweet = $('<article>').addClass('tweet');
+    const $finishedTweet = $('<article>').addClass('tweet');
 
-    const $img = $('<img>').attr('src', tweetObj.user.avatars);
-    const $name = $('<h3>').text(tweetObj.user.name);
-    const $username = $('<h4>').text(tweetObj.user.handle);
+    const $avatar = $('<img>').attr('src', tweetObj.user.avatars);
+    const $userName = $('<h3>').text(tweetObj.user.name);
+    const $userHandle = $('<h4>').text(tweetObj.user.handle);
 
-    const $div = $('<div>').append($img, $name);
-    const $usernameDiv = $('<div>').append($username);
+    const $avatarNameDiv = $('<div>').append($avatar, $userName);
+    const $usernameDiv = $('<div>').append($userHandle);
 
     const $header = $('<header>')
       .addClass('tweet-header')
-      .append($div, $usernameDiv);
+      .append($avatarNameDiv, $usernameDiv);
 
-    $tweet.append($header);
+    $finishedTweet.append($header);
 
     const $tweetContent = $('<p>').text(tweetObj.content.text);
-    const $div2 = $('<div>').addClass('tweet-body').append($tweetContent);
+    const $contentDiv = $('<div>').addClass('tweet-body').append($tweetContent);
 
-    $tweet.append($div2);
+    $finishedTweet.append($contentDiv);
 
     const $timeCreated = $('<span>').text(
       timeago.format(tweetObj.created_at)
@@ -108,13 +108,13 @@ $(() => {
     const $retweetIcon = $('<i>').addClass('fa-solid fa-retweet');
     const $replyIcon = $('<i>').addClass('fa-solid fa-reply');
   
-    const $div3 = $('<div>').append($heartIcon, $retweetIcon, $replyIcon);
+    const $iconsDiv = $('<div>').append($heartIcon, $retweetIcon, $replyIcon);
 
-    const $footer = $('<footer>')
+    const $tweetFooter = $('<footer>')
       .addClass('tweet-footer')
-      .append($timeCreated, $div3);
+      .append($timeCreated, $iconsDiv);
 
-    $tweet.append($footer);
+    $tweet.append($tweetFooter);
 
     return $tweet;
 
