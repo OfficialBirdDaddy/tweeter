@@ -39,4 +39,15 @@ nav span {
 
 }
 
+@keyframes arrowAnimation {
+  from {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 5px, 0);
+  }
+}
 
+.nav_newtweet i:hover {
+  animation: arrowAnimation 1s infinite;
+}

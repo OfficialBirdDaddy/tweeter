@@ -139,6 +139,10 @@ main {
 
 }
 
+#compose-tweet {
+  display: none;
+}
+
 .empty-tweet {
   display: flex;
   flex-direction: column;
@@ -165,6 +169,27 @@ main {
   padding: 0.5em;
   display: none;
 
+}
+
+#scroll-button {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: 4056a1;
+  color: f4f1ec;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: smaller;
+
+}
+
+#scroll-button:hover {
+  background-color: darkgoldenrod;
 }
 
 @media (max-width: 768px) {

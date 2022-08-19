@@ -13,6 +13,28 @@ $(() => {
   //
   // FUNCTIONS
   //
+
+  // Scrolling-to-top function
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Function whether to display the 'Write a tweet' button
+
+  $('.nav_newtweet').on('click', (event) => { // have this working, can't finish full stretch funcionality in given time!
+    if ($('#compose-tweet').css('display') === 'none') {
+      scrollToTop();
+      $('#compose-tweet').slideDown();
+      $('#compose-tweet').css('display', 'block');
+      $('.nav_newtweet').fadeOut();
+      
+  } else {
+
+      $('#compose-tweet').slideUp();
+    }
+  });
+  
   
   // AJAX request to get data from server
 
@@ -64,12 +86,12 @@ $(() => {
     const $name = $('<h3>').text(tweetObj.user.name);
     const $username = $('<h4>').text(tweetObj.user.handle);
 
-    const $div = $('<div>').append($img).append($name);
+    const $div = $('<div>').append($img, $name);
     const $usernameDiv = $('<div>').append($username);
 
     const $header = $('<header>')
       .addClass('tweet-header')
-      .append($div).append($usernameDiv);
+      .append($div, $usernameDiv);
 
     $tweet.append($header);
 
@@ -86,21 +108,19 @@ $(() => {
     const $retweetIcon = $('<i>').addClass('fa-solid fa-retweet');
     const $replyIcon = $('<i>').addClass('fa-solid fa-reply');
   
-    const $div3 = $('<div>')
-      .append($heartIcon)
-      .append($retweetIcon)
-      .append($replyIcon);
+    const $div3 = $('<div>').append($heartIcon, $retweetIcon, $replyIcon);
 
     const $footer = $('<footer>')
       .addClass('tweet-footer')
-      .append($timeCreated)
-      .append($div3);
+      .append($timeCreated, $div3);
 
     $tweet.append($footer);
 
     return $tweet;
 
   };
+
+  // Function to load tweets from server
 
   const loadTweets = () => {
     $.get('/tweets', (data) => {
