@@ -4,10 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//
-//TESTING
-//
-
 $(() => {
 
   //
@@ -114,9 +110,9 @@ $(() => {
       .addClass('tweet-footer')
       .append($timeCreated, $iconsDiv);
 
-    $tweet.append($tweetFooter);
+    $finishedTweet.append($tweetFooter);
 
-    return $tweet;
+    return $finishedTweet;
 
   };
 
