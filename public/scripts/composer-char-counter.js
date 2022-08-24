@@ -9,6 +9,8 @@ $(document).ready(function() {
 
     if (charNumber > maxChars) { //changes colour to red if over max chararacters
       $('.counter').css('color', 'red');
+    } else {
+      $('.counter').css('color', 'black');
     }
 
   })

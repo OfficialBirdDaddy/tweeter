@@ -57,11 +57,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        
+        <p class="too-long"><b>Sorry, this tweet is too long!</b></p>
+        <p class="empty-tweet"><b>You can't post an empty tweet!</b></p>
+        
         <form id="compose-tweet">
-
-          <p class="too-long">Sorry, this tweet is too long!</p>
-          <p class="empty-tweet">You can't post an empty tweet!</p>
-
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
@@ -76,8 +76,6 @@
         <!-- Generated tweets contained within this section tag -->
 
       </section>
-
-      <button onclick="scrollFunc()" id="scroll-button">Return to Top</button>
 
     </main>
 

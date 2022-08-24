@@ -37,9 +37,9 @@ $(() => {
   $('#compose-tweet').submit(function(event) {
     event.preventDefault();
     const data = $(this).serialize();
-    const tweetData = data.slice(6);
+    const tweetData = data.slice(5);
     
-    if(!tweetData) {
+    if(tweetData.length === 0) {
       $('.empty-tweet').slideDown();
       return;
     }
