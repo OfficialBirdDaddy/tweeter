@@ -97,6 +97,7 @@ main {
 .tweet-body {
   border-bottom-style: solid;
   padding: 0.5em;
+  overflow-wrap: break-word;
 
 }
 

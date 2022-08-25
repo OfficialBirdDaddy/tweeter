@@ -58,6 +58,7 @@ $(() => {
     $('.too-long').slideUp();
     $('.empty-tweet').slideUp();
     $('#tweet-text').val('');
+    $('.counter').text(140);
   });
 });
   

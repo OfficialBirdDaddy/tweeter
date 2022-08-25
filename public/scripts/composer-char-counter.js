@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   const maxChars = 140;
-  $('#tweet-text').keyup(function() {
+  $('#tweet-text').on("keydown", function() {
     
     const charNumber = $(this).val().length;
     
